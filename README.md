@@ -13,7 +13,7 @@ Move the paddle using the mouse. Help the ball break all the bricks before you r
 
 Created using [Godot 4.1.1](https://godotengine.org/download)
 
-Music recorded in [MuseScore 4.1.1](https://musescore.org/en)
+Music composed in [MuseScore 4.1.1](https://musescore.org/en)
 
 Sound effects recorded in [Audacity 3.3.3](https://www.audacityteam.org/)
 
