@@ -26,7 +26,12 @@ func _ready():
 	reset()
 
 func _physics_process(_delta):
-	pass
+	if color_rotate >= 0:
+		color_rotate -= color_rotate_index
+		color_rotate_index *= 1.05
+	else:
+		color_rotate_index = 0.1
+	sway_index += sway_period
 
 func _unhandled_input(event):
 	if event.is_action_pressed("menu"):
@@ -76,10 +81,10 @@ func update_time(t):
 
 func next_level():
 	level += 1
-	var _scene = get_tree().change_scene("res://Game.tscn")
+	var _scene = get_tree().change_scene_to_file("res://Game.tscn")
 
 func end_game(success):
 	if success:
-		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
+		var _scene = get_tree().change_scene_to_file("res://UI/End_Game.tscn")
 	else:
-		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
+		var _scene = get_tree().change_scene_to_file("res://UI/End_Game.tscn")
